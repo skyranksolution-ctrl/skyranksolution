@@ -1,0 +1,108 @@
+import { IndustryItem } from "@/types";
+
+export const industriesData: IndustryItem[] = [
+  {
+    id: "saas",
+    name: "SaaS & B2B Tech",
+    tagline: "Drive high-intent product-led organic signups and demo requests",
+    description: "We optimize software-as-a-service architectures with product comparison matrices, feature page keyword clusters, and solution-oriented search funnels that attract enterprise decision-makers.",
+    icon: "Layers",
+    keyBenefits: [
+      "Bottom-of-funnel 'Alternative to' & 'Vs' ranking strategies",
+      "Documentation & knowledge-base technical SEO",
+      "High LTV trial and demo booking conversion architecture",
+    ],
+    focusAreas: ["Feature Pages", "Competitor Comparison", "API Docs", "Resource Hubs"],
+  },
+  {
+    id: "ecommerce",
+    name: "E-Commerce & D2C",
+    tagline: "Dominate transactional product searches and catalog categories",
+    description: "From faceted navigation management to rich snippet product schema and product review engineering, we turn category pages into consistent revenue drivers.",
+    icon: "ShoppingBag",
+    keyBenefits: [
+      "Product schema & merchant center feeds alignment",
+      "Faceted navigation crawl budget optimization",
+      "Commercial intent keyword mapping for high ROAS",
+    ],
+    focusAreas: ["Category Pages", "Product Detail Pages", "Faceted Filters", "Seasonal Collections"],
+  },
+  {
+    id: "real-estate",
+    name: "Real Estate & Builders",
+    tagline: "Capture localized property buyers and investor inquiries",
+    description: "Capture qualified buyers searching for residential projects, commercial spaces, and rental hubs through hyperlocal landing pages and Google Map Pack visibility.",
+    icon: "Building2",
+    keyBenefits: [
+      "Hyperlocal neighborhood & project keyword targeting",
+      "Google Business Profile optimization for site offices",
+      "High-speed mobile virtual tour page speed optimization",
+    ],
+    focusAreas: ["Project Showcases", "Locality Guides", "Investor Insights", "Virtual Tours"],
+  },
+  {
+    id: "healthcare",
+    name: "Healthcare & Clinics",
+    tagline: "Build patient trust through verified medical E-E-A-T and local search",
+    description: "Healthcare SEO requires strict compliance with Google's Your Money or Your Life (YMYL) standards. We build authoritative author schemas, clinical review workflows, and patient acquisition funnels.",
+    icon: "HeartPulse",
+    keyBenefits: [
+      "YMYL compliance and medical author credentials schema",
+      "Local appointment booking workflow integration",
+      "Specialty treatment search query optimization",
+    ],
+    focusAreas: ["Doctor Profiles", "Treatment Guides", "Clinic Locations", "Patient FAQs"],
+  },
+  {
+    id: "education",
+    name: "Education & EdTech",
+    tagline: "Enroll motivated students with curriculum and course visibility",
+    description: "Help schools, colleges, training institutes, and online platforms rank for degree programs, vocational certifications, and career advancement search queries.",
+    icon: "GraduationCap",
+    keyBenefits: [
+      "Course schema and curriculum snippet enhancements",
+      "Admission cycle seasonal SEO campaign planning",
+      "Informational to enrollment lead generation journeys",
+    ],
+    focusAreas: ["Course Pages", "Admissions Guides", "Placement Stories", "Certification Info"],
+  },
+  {
+    id: "travel",
+    name: "Travel & Hospitality",
+    tagline: "Inspire bookings through destination search clusters and itinerary guides",
+    description: "Capture travelers at every stage of their journey—from dream destination research and seasonal guides to instant booking inquiries and package comparisons.",
+    icon: "Compass",
+    keyBenefits: [
+      "Visual search and destination image SEO",
+      "Seasonal trend forecasting and editorial calendar",
+      "Direct booking conversion optimization",
+    ],
+    focusAreas: ["Tour Packages", "Destination Guides", "Seasonal Itineraries", "Hotel Deals"],
+  },
+  {
+    id: "technology",
+    name: "Product & IT Services",
+    tagline: "Attract enterprise procurement leads for custom tech solutions",
+    description: "Position IT consulting, cloud engineering, and software development agencies as primary technology partners through authoritative case studies and niche service pages.",
+    icon: "Cpu",
+    keyBenefits: [
+      "Enterprise RFQ lead generation pathways",
+      "Technical thought-leadership whitepapers and pillar pages",
+      "Global multi-currency and regional target market SEO",
+    ],
+    focusAreas: ["Solutions Architecture", "Tech Stack Pages", "Case Studies", "Industry Verticals"],
+  },
+  {
+    id: "local-business",
+    name: "Local Service Businesses",
+    tagline: "Become the undisputed #1 recommended service in your territory",
+    description: "For legal, financial, home maintenance, architectural, and professional service firms wanting to dominate the Google 3-Pack and phone call generation.",
+    icon: "MapPin",
+    keyBenefits: [
+      "Consistent NAP citation distribution across top directories",
+      "Local service schema and review capture workflows",
+      "Direct click-to-call mobile experience optimization",
+    ],
+    focusAreas: ["Service Radius Pages", "Google Maps 3-Pack", "Customer Reviews", "Call Tracking"],
+  },
+];
