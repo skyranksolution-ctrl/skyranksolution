@@ -33,26 +33,26 @@ export function ProcessSection() {
   ];
 
   return (
-    <section className="py-24 bg-[#FAFCFF] text-slate-900 relative overflow-hidden border-t border-slate-200/80">
+    <section className="py-14 sm:py-20 md:py-24 bg-[#FAFCFF] text-slate-900 relative overflow-hidden border-t border-slate-200/80">
       <div className="absolute inset-0 bg-[radial-gradient(#e2e8f0_1px,transparent_1px)] [background-size:24px_24px] opacity-60 pointer-events-none" />
 
       <div className="w-full px-4 sm:px-6 lg:px-8 xl:px-10 2xl:px-14 relative z-10">
         
         {/* Header with FadeIn */}
-        <FadeIn className="text-center max-w-3xl mx-auto mb-16 space-y-3">
+        <FadeIn className="text-center max-w-3xl mx-auto mb-10 sm:mb-16 space-y-3">
           <span className="text-xs font-bold uppercase tracking-wider text-amber-700 bg-amber-50 px-3.5 py-1 rounded-full border border-amber-200">
             Systematic Methodology
           </span>
-          <h2 className="text-3xl sm:text-5xl font-black text-slate-900 tracking-tight">
+          <h2 className="text-2xl sm:text-4xl lg:text-5xl font-black text-slate-900 tracking-tight">
             The 10-Step Organic Growth Framework
           </h2>
-          <p className="text-sm sm:text-base text-slate-600 leading-relaxed max-w-2xl mx-auto">
+          <p className="text-xs sm:text-base text-slate-600 leading-relaxed max-w-2xl mx-auto">
             Market leadership is never an accident. We follow a disciplined, phased roadmap that turns technical SEO and content into compounding business equity.
           </p>
         </FadeIn>
 
         {/* 10 Step Grid with Stagger */}
-        <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4">
+        <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3.5 sm:gap-4">
           {steps.map((item) => {
             const Icon = item.icon;
             const isSelected = activeStep === item.step;

@@ -28,7 +28,7 @@ export function FinalCTASection() {
           </div>
 
           {/* Banner Content (Left Aligned exactly like reference) */}
-          <div className="relative z-20 py-10 sm:py-14 md:py-16 px-6 sm:px-10 md:px-14 lg:px-16 max-w-2xl text-left">
+          <div className="relative z-20 py-8 sm:py-14 md:py-16 px-4 sm:px-10 md:px-14 lg:px-16 max-w-2xl text-left">
             <FadeIn className="space-y-3 sm:space-y-4">
               {/* Top Subtitle */}
               <p className="text-base sm:text-xl font-medium text-slate-200 tracking-wide">
@@ -37,7 +37,7 @@ export function FinalCTASection() {
 
               {/* Massive Bold Headline */}
               <div className="space-y-1">
-                <h2 className="text-4xl sm:text-6xl md:text-7xl font-black text-white tracking-tight leading-none uppercase">
+                <h2 className="text-3xl sm:text-6xl md:text-7xl font-black text-white tracking-tight leading-none uppercase">
                   15 DAYS <span className="text-rose-500">FREE</span>
                 </h2>
               </div>

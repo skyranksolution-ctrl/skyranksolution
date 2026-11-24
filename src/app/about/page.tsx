@@ -23,13 +23,13 @@ export default function AboutPage() {
       <Breadcrumbs items={[{ label: "About Us", href: "/about" }]} />
 
       {/* Hero Section */}
-      <section className="py-16 md:py-24 bg-slate-950 text-white relative overflow-hidden">
+      <section className="py-10 sm:py-16 md:py-24 bg-slate-950 text-white relative overflow-hidden">
         <div className="absolute top-0 right-1/4 w-[500px] h-[350px] bg-blue-600/15 blur-[120px] rounded-full pointer-events-none" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center max-w-3xl">
           <span className="text-xs font-bold uppercase tracking-widest text-blue-400 bg-blue-500/10 px-3 py-1 rounded-full border border-blue-400/20">
             About SkyRank Solution
           </span>
-          <h1 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-white mt-4 mb-6">
+          <h1 className="text-2xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-white mt-4 mb-6">
             We Engineer Search Visibility for Modern Businesses
           </h1>
           <p className="text-base sm:text-lg text-slate-300 leading-relaxed">

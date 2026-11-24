@@ -185,13 +185,13 @@ export function HeroSection() {
 
             {/* Core Value Proposition Headline */}
             <div className="space-y-2">
-              <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black text-slate-900 tracking-tight leading-[1.12]">
+              <h1 className="text-2xl sm:text-5xl lg:text-6xl font-black text-slate-900 tracking-tight leading-[1.12]">
                 Rank Higher. Convert Faster.{" "}
                 <span className="bg-gradient-to-r from-blue-600 via-indigo-600 to-blue-700 bg-clip-text text-transparent">
                   Dominate Google #1.
                 </span>
               </h1>
-              <p className="text-base sm:text-lg font-bold text-slate-800 pt-1">
+              <p className="text-sm sm:text-lg font-bold text-slate-800 pt-1">
                 Still Not Getting Qualified Inquiries from Google Search?
               </p>
               <p className="text-xs sm:text-sm text-slate-600 leading-relaxed max-w-xl">
@@ -252,7 +252,7 @@ export function HeroSection() {
             </div>
 
             {/* Social Proof Line */}
-            <div className="flex items-center gap-4 text-xs text-slate-500 font-semibold pt-2">
+            <div className="flex flex-wrap items-center gap-x-3 gap-y-1.5 text-xs text-slate-500 font-semibold pt-2">
               <div className="flex items-center gap-1.5">
                 <div className="flex text-amber-400">
                   {[...Array(5)].map((_, i) => (
@@ -273,7 +273,7 @@ export function HeroSection() {
             {/* Ambient Background Aura behind card */}
             <div className="absolute -inset-2 bg-gradient-to-r from-blue-500/10 via-indigo-500/10 to-cyan-500/10 rounded-3xl blur-2xl -z-10" />
 
-            <div className="bg-white/95 backdrop-blur-xl border border-slate-200/90 rounded-3xl p-6 sm:p-8 shadow-[0_25px_60px_-15px_rgba(37,99,235,0.12)] relative">
+            <div className="bg-white/95 backdrop-blur-xl border border-slate-200/90 rounded-3xl p-4 sm:p-6 md:p-8 shadow-[0_25px_60px_-15px_rgba(37,99,235,0.12)] relative">
               {/* Floating Live SERP Badge on Top Right */}
               <div className="absolute -top-3.5 right-6 px-3 py-1 rounded-full bg-gradient-to-r from-blue-600 to-indigo-600 text-white text-[10px] font-black uppercase tracking-wider shadow-md flex items-center gap-1.5">
                 <Zap className="w-3 h-3 text-amber-300" />
@@ -456,7 +456,7 @@ export function HeroSection() {
                           aria-label="Country Dial Code"
                           value={formData.countryCode}
                           onChange={(e) => handleChange("countryCode", e.target.value)}
-                          className="w-28 px-2 py-3 rounded-xl border border-slate-200 text-xs font-bold text-slate-700 bg-slate-50 focus:outline-none focus:ring-2 focus:ring-blue-600 cursor-pointer"
+                          className="w-24 sm:w-28 px-2 py-3 rounded-xl border border-slate-200 text-xs font-bold text-slate-700 bg-slate-50 focus:outline-none focus:ring-2 focus:ring-blue-600 cursor-pointer"
                         >
                           <option value="+91">India (+91)</option>
                           <option value="+1">USA (+1)</option>
@@ -544,9 +544,13 @@ export function HeroSection() {
 
                     {/* Security Footnote */}
                     <div className="text-center pt-1">
-                      <span className="text-[11px] text-slate-400 flex items-center justify-center gap-1 font-medium">
-                        <Lock className="w-3 h-3 text-emerald-600" />
-                        <span>100% Confidential • No credit card required • NDA Protected</span>
+                      <span className="text-[10px] sm:text-[11px] text-slate-400 flex flex-wrap items-center justify-center gap-x-1.5 gap-y-0.5 font-medium">
+                        <Lock className="w-3 h-3 text-emerald-600 inline" />
+                        <span>100% Confidential</span>
+                        <span>•</span>
+                        <span>No credit card required</span>
+                        <span>•</span>
+                        <span>NDA Protected</span>
                       </span>
                     </div>
                   </form>

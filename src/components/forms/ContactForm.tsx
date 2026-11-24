@@ -78,7 +78,7 @@ export function ContactForm({ defaultService }: { defaultService?: string }) {
   };
 
   return (
-    <div className="bg-white rounded-2xl p-6 md:p-8 shadow-xl border border-slate-100">
+    <div className="bg-white rounded-2xl p-4 sm:p-6 md:p-8 shadow-xl border border-slate-100">
       {successMessage ? (
         <div className="text-center py-10">
           <div className="w-16 h-16 bg-emerald-50 text-emerald-600 rounded-full flex items-center justify-center mx-auto mb-4">

@@ -18,12 +18,12 @@ export default function ServicesPage() {
       <Breadcrumbs items={[{ label: "Services", href: "/services" }]} />
 
       {/* Hero Header */}
-      <section className="py-16 md:py-20 bg-slate-950 text-white text-center relative overflow-hidden">
+      <section className="py-10 sm:py-16 md:py-20 bg-slate-950 text-white text-center relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 max-w-3xl">
           <span className="text-xs font-bold uppercase tracking-widest text-blue-400 bg-blue-500/10 px-3 py-1 rounded-full border border-blue-400/20">
             Our Complete Capabilities
           </span>
-          <h1 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-white mt-4 mb-4">
+          <h1 className="text-2xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-white mt-4 mb-4">
             Specialized SEO & Engineering Services
           </h1>
           <p className="text-base text-slate-300 leading-relaxed">

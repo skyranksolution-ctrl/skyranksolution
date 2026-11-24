@@ -68,12 +68,12 @@ export function TrustSection() {
 
       {/* Infinite Horizontal Marquee Ticker */}
       <div className="w-full overflow-hidden border-b border-slate-100 pb-8 mb-12">
-        <div className="flex w-[200%] animate-marquee">
-          <div className="flex items-center gap-6 whitespace-nowrap px-4">
+        <div className="flex w-max animate-marquee">
+          <div className="flex items-center gap-4 sm:gap-6 whitespace-nowrap px-4">
             {marqueeItems.concat(marqueeItems).map((item, idx) => (
               <span
                 key={idx}
-                className="inline-flex items-center gap-2.5 text-xs sm:text-sm font-bold text-slate-700 bg-slate-50 px-4 py-2 rounded-full border border-slate-200 shadow-sm hover:border-blue-400 hover:text-blue-600 transition-colors"
+                className="inline-flex items-center gap-2.5 text-xs sm:text-sm font-bold text-slate-700 bg-slate-50 px-3.5 sm:px-4 py-2 rounded-full border border-slate-200 shadow-sm hover:border-blue-400 hover:text-blue-600 transition-colors"
               >
                 <Sparkles className="w-3.5 h-3.5 text-blue-600" />
                 {item}
@@ -86,10 +86,10 @@ export function TrustSection() {
       <div className="w-full px-4 sm:px-6 lg:px-8 xl:px-10 2xl:px-14 relative z-10">
         
         {/* Stat Highlights Bar with Animated Counters on Scroll */}
-        <StaggerContainer className="grid grid-cols-2 md:grid-cols-4 gap-4 pb-12 border-b border-slate-100">
+        <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 pb-12 border-b border-slate-100">
           {statPills.map((stat) => (
             <StaggerItem key={stat.label}>
-              <div className="p-5 rounded-2xl bg-slate-50/80 border border-slate-200 hover:border-blue-400 hover:bg-white hover:shadow-md transition-all flex items-center gap-4 group">
+              <div className="p-4 sm:p-5 rounded-2xl bg-slate-50/80 border border-slate-200 hover:border-blue-400 hover:bg-white hover:shadow-md transition-all flex items-center gap-3.5 sm:gap-4 group">
                 <div className="w-12 h-12 rounded-xl bg-blue-50 border border-blue-200 text-blue-600 flex items-center justify-center font-black text-sm group-hover:scale-110 group-hover:bg-blue-600 group-hover:text-white transition-all flex-shrink-0">
                   <Sparkles className="w-5 h-5 text-amber-500 group-hover:text-white" />
                 </div>

@@ -11,14 +11,14 @@ export function WhatsAppButton() {
   const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${message}`;
 
   return (
-    <div className="fixed bottom-6 right-6 z-40 flex flex-col items-end gap-3 pointer-events-auto">
+    <div className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-40 flex flex-col items-end gap-2.5 sm:gap-3 pointer-events-auto">
       {/* 1. Direct Call Floating Button */}
       <a
         href={`tel:${cleanPhone}`}
         aria-label={`Call SkyRank Solution directly at ${siteConfig.contact.phone}`}
-        className="group relative flex items-center bg-blue-600 hover:bg-blue-700 text-white p-3.5 rounded-full shadow-xl shadow-blue-600/40 hover:shadow-blue-500/60 hover:scale-110 active:scale-95 transition-all cursor-pointer border border-blue-400/40"
+        className="group relative flex items-center bg-blue-600 hover:bg-blue-700 text-white p-3 sm:p-3.5 rounded-full shadow-xl shadow-blue-600/40 hover:shadow-blue-500/60 hover:scale-110 active:scale-95 transition-all cursor-pointer border border-blue-400/40"
       >
-        <PhoneCall className="w-5 h-5 animate-pulse" />
+        <PhoneCall className="w-4 h-4 sm:w-5 sm:h-5 animate-pulse" />
         <span className="max-w-0 overflow-hidden whitespace-nowrap group-hover:max-w-xs transition-all duration-300 ease-in-out text-xs font-bold pl-0 group-hover:pl-2 pr-0 group-hover:pr-2">
           Call: {siteConfig.contact.phone}
         </span>
@@ -30,7 +30,7 @@ export function WhatsAppButton() {
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Chat with SkyRank Solution SEO Strategist on WhatsApp"
-        className="group relative flex items-center bg-[#25D366] hover:bg-[#20bd5a] text-white p-3.5 rounded-full shadow-2xl shadow-emerald-600/40 hover:shadow-emerald-500/60 hover:scale-110 active:scale-95 transition-all cursor-pointer border border-emerald-300/40"
+        className="group relative flex items-center bg-[#25D366] hover:bg-[#20bd5a] text-white p-3 sm:p-3.5 rounded-full shadow-2xl shadow-emerald-600/40 hover:shadow-emerald-500/60 hover:scale-110 active:scale-95 transition-all cursor-pointer border border-emerald-300/40"
       >
         {/* Online Status Ping Animation */}
         <span className="absolute -top-1 -right-1 flex h-3 w-3">

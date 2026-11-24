@@ -157,11 +157,11 @@ function ConsultationFormContent() {
   )}`;
 
   return (
-    <div className="bg-white rounded-3xl p-6 md:p-8 shadow-2xl border border-slate-100 relative">
+    <div className="bg-white rounded-3xl p-4 sm:p-6 md:p-8 shadow-2xl border border-slate-100 relative">
       {/* Active Offer Ribbon */}
       {(offer === "15-days-free-demo" || !offer) && (
-        <div className="mb-5 inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-50 border border-blue-200 text-blue-700 text-xs font-bold">
-          <Sparkles className="w-3.5 h-3.5 text-blue-600 animate-pulse" />
+        <div className="mb-5 inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-50 border border-blue-200 text-blue-700 text-[11px] sm:text-xs font-bold">
+          <Sparkles className="w-3.5 h-3.5 text-blue-600 animate-pulse flex-shrink-0" />
           <span>15-DAY FREE RISK-FREE DEMO ACTIVE • ZERO UPFRONT COST</span>
         </div>
       )}

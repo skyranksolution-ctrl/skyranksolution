@@ -53,18 +53,18 @@ export function WhyChooseUs() {
   ];
 
   return (
-    <section className="py-24 bg-white text-slate-900 relative overflow-hidden border-t border-slate-200/80">
+    <section className="py-14 sm:py-20 md:py-24 bg-white text-slate-900 relative overflow-hidden border-t border-slate-200/80">
       <div className="w-full px-4 sm:px-6 lg:px-8 xl:px-10 2xl:px-14 relative z-10">
         
         {/* Section Heading with FadeIn */}
-        <FadeIn className="text-center max-w-3xl mx-auto mb-16 space-y-3">
+        <FadeIn className="text-center max-w-3xl mx-auto mb-10 sm:mb-16 space-y-3">
           <span className="text-xs font-bold uppercase tracking-widest text-amber-700 bg-amber-50 px-3.5 py-1 rounded-full border border-amber-200">
             Why SkyRank Solution
           </span>
-          <h2 className="text-3xl sm:text-5xl font-black text-slate-900 tracking-tight leading-tight">
+          <h2 className="text-2xl sm:text-4xl lg:text-5xl font-black text-slate-900 tracking-tight leading-tight">
             Why High-Growth Companies Choose SkyRank Solution
           </h2>
-          <p className="text-sm sm:text-base text-slate-600 leading-relaxed max-w-2xl mx-auto">
+          <p className="text-xs sm:text-base text-slate-600 leading-relaxed max-w-2xl mx-auto">
             In an industry plagued by false promises and automated spam, SkyRank Solution stands apart through engineering discipline, mathematical rigor, and radical transparency.
           </p>
         </FadeIn>

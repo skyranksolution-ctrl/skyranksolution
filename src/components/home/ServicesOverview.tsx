@@ -38,27 +38,27 @@ export function ServicesOverview() {
   ] as const;
 
   return (
-    <section className="py-24 bg-[#F8FAFC] text-slate-900 relative overflow-hidden border-b border-slate-200/80">
+    <section className="py-14 sm:py-20 md:py-24 bg-[#F8FAFC] text-slate-900 relative overflow-hidden border-b border-slate-200/80">
       {/* Background Subtle Pattern */}
       <div className="absolute inset-0 bg-[radial-gradient(#e2e8f0_1px,transparent_1px)] [background-size:24px_24px] opacity-60 pointer-events-none" />
 
       <div className="w-full px-4 sm:px-6 lg:px-8 xl:px-10 2xl:px-14 relative z-10">
         
         {/* Header with FadeIn */}
-        <FadeIn className="text-center max-w-3xl mx-auto mb-14 space-y-3">
+        <FadeIn className="text-center max-w-3xl mx-auto mb-10 sm:mb-14 space-y-3">
           <span className="text-xs font-bold uppercase tracking-wider text-blue-700 bg-blue-50 px-3.5 py-1 rounded-full border border-blue-200">
             Engineered Capabilities
           </span>
-          <h2 className="text-3xl sm:text-5xl font-black text-slate-900 tracking-tight leading-tight">
+          <h2 className="text-2xl sm:text-4xl lg:text-5xl font-black text-slate-900 tracking-tight leading-tight">
             Comprehensive Search & Growth Engineering
           </h2>
-          <p className="text-sm sm:text-base text-slate-600 leading-relaxed max-w-2xl mx-auto">
+          <p className="text-xs sm:text-base text-slate-600 leading-relaxed max-w-2xl mx-auto">
             From technical Core Web Vitals remediation and semantic AI entity clustering to high-authority editorial outreach and custom Next.js development.
           </p>
         </FadeIn>
 
         {/* Interactive Filter Pills */}
-        <FadeIn delay={0.1} className="flex items-center justify-center gap-2 flex-wrap mb-12">
+        <FadeIn delay={0.1} className="flex items-center justify-center gap-2 flex-wrap mb-8 sm:mb-12">
           {filterTabs.map((tab) => {
             const isActive = filter === tab.id;
             return (

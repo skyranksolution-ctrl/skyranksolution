@@ -26,12 +26,12 @@ export default function BlogIndexPage() {
     <>
       <Breadcrumbs items={[{ label: "Blog", href: "/blog" }]} />
 
-      <section className="py-16 md:py-24 bg-slate-950 text-white text-center relative overflow-hidden">
+      <section className="py-10 sm:py-16 md:py-24 bg-slate-950 text-white text-center relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 max-w-3xl">
           <span className="text-xs font-bold uppercase tracking-widest text-blue-400 bg-blue-500/10 px-3 py-1 rounded-full border border-blue-400/20">
             SEO Knowledge Base
           </span>
-          <h1 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-white mt-4 mb-4">
+          <h1 className="text-2xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-white mt-4 mb-4">
             Search Engineering & Digital Marketing Insights
           </h1>
           <p className="text-base text-slate-300 leading-relaxed">

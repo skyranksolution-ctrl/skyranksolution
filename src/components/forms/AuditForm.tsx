@@ -73,7 +73,7 @@ export function AuditForm({ compact = false }: { compact?: boolean }) {
   };
 
   return (
-    <div className="bg-slate-900/95 rounded-3xl p-6 md:p-8 shadow-2xl border border-slate-700/80 backdrop-blur-xl text-white">
+    <div className="bg-slate-900/95 rounded-3xl p-4 sm:p-6 md:p-8 shadow-2xl border border-slate-700/80 backdrop-blur-xl text-white">
       {successMessage ? (
         <div className="text-center py-8">
           <div className="w-16 h-16 bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 rounded-full flex items-center justify-center mx-auto mb-4">

@@ -84,8 +84,8 @@ export function Navbar() {
         <div className="flex items-center justify-between h-20 gap-4">
           
           {/* Official Brand Logo Section */}
-          <Link href="/" className="flex items-center gap-3.5 group flex-shrink-0">
-            <div className="relative w-12 h-12 rounded-full p-[1.5px] bg-gradient-to-tr from-blue-600 via-indigo-600 to-cyan-500 shadow-[0_0_20px_rgba(8,102,255,0.25)] group-hover:shadow-[0_0_30px_rgba(8,102,255,0.45)] group-hover:scale-105 transition-all duration-300">
+          <Link href="/" className="flex items-center gap-2.5 sm:gap-3.5 group flex-shrink-0">
+            <div className="relative w-10 h-10 sm:w-12 sm:h-12 rounded-full p-[1.5px] bg-gradient-to-tr from-blue-600 via-indigo-600 to-cyan-500 shadow-[0_0_20px_rgba(8,102,255,0.25)] group-hover:shadow-[0_0_30px_rgba(8,102,255,0.45)] group-hover:scale-105 transition-all duration-300">
               <Image
                 src="/images/logo.png"
                 alt="SkyRank Solution Logo"
@@ -94,13 +94,13 @@ export function Navbar() {
                 priority
                 className="w-full h-full rounded-full object-cover bg-white"
               />
-              <div className="absolute -top-0.5 -right-0.5 w-3.5 h-3.5 rounded-full bg-emerald-500 border-2 border-white animate-pulse shadow-[0_0_8px_#10b981]" />
+              <div className="absolute -top-0.5 -right-0.5 w-3 sm:w-3.5 h-3 sm:h-3.5 rounded-full bg-emerald-500 border-2 border-white animate-pulse shadow-[0_0_8px_#10b981]" />
             </div>
             <div className="flex flex-col">
-              <span className="font-black text-xl tracking-tight text-slate-900 group-hover:text-blue-600 transition-colors whitespace-nowrap">
+              <span className="font-black text-lg sm:text-xl tracking-tight text-slate-900 group-hover:text-blue-600 transition-colors whitespace-nowrap">
                 SkyRank<span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">Solution</span>
               </span>
-              <span className="text-[10px] uppercase tracking-wider text-slate-500 font-semibold whitespace-nowrap">
+              <span className="text-[10px] uppercase tracking-wider text-slate-500 font-semibold whitespace-nowrap hidden sm:inline-block">
                 Autonomous Search &amp; Growth Agency
               </span>
             </div>
@@ -327,13 +327,13 @@ export function Navbar() {
           <div className="flex lg:hidden items-center gap-2">
             <Link
               href="/seo-audit"
-              className="px-3 py-1.5 rounded-xl text-xs font-bold text-white bg-gradient-to-r from-blue-600 to-indigo-600 shadow-md shadow-blue-600/30"
+              className="hidden sm:inline-flex px-3 py-1.5 rounded-xl text-xs font-bold text-white bg-gradient-to-r from-blue-600 to-indigo-600 shadow-md shadow-blue-600/30"
             >
               Free Audit
             </Link>
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="p-2 rounded-xl text-slate-700 hover:text-slate-900 hover:bg-slate-100"
+              className="p-2 rounded-xl text-slate-700 hover:text-slate-900 hover:bg-slate-100 transition-colors"
               aria-label="Toggle navigation menu"
             >
               {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -344,50 +344,95 @@ export function Navbar() {
 
       {/* Mobile Drawer Navigation */}
       {mobileMenuOpen && (
-        <div className="lg:hidden bg-white border-b border-slate-200 px-4 pt-3 pb-6 space-y-3">
+        <div className="lg:hidden bg-white border-b border-slate-200 px-4 pt-3 pb-6 space-y-3 max-h-[calc(100vh-5rem)] overflow-y-auto">
           <div className="grid grid-cols-2 gap-2 pb-3 border-b border-slate-100">
             <Link
               href="/"
               onClick={() => setMobileMenuOpen(false)}
-              className="p-2.5 rounded-2xl bg-slate-50 text-sm font-semibold text-slate-800 text-center hover:bg-slate-100"
+              className={`p-2.5 rounded-2xl text-xs font-semibold text-center transition-colors ${
+                pathname === "/" ? "bg-blue-50 text-blue-600 font-bold" : "bg-slate-50 text-slate-800 hover:bg-slate-100"
+              }`}
             >
               Home
             </Link>
             <Link
               href="/services"
               onClick={() => setMobileMenuOpen(false)}
-              className="p-2.5 rounded-2xl bg-slate-50 text-sm font-semibold text-slate-800 text-center hover:bg-slate-100"
+              className={`p-2.5 rounded-2xl text-xs font-semibold text-center transition-colors ${
+                pathname.startsWith("/services") ? "bg-blue-50 text-blue-600 font-bold" : "bg-slate-50 text-slate-800 hover:bg-slate-100"
+              }`}
             >
               Services (15)
             </Link>
             <Link
               href="/blog"
               onClick={() => setMobileMenuOpen(false)}
-              className="p-2.5 rounded-2xl bg-slate-50 text-sm font-semibold text-slate-800 text-center hover:bg-slate-100"
+              className={`p-2.5 rounded-2xl text-xs font-semibold text-center transition-colors ${
+                pathname.startsWith("/blog") ? "bg-blue-50 text-blue-600 font-bold" : "bg-slate-50 text-slate-800 hover:bg-slate-100"
+              }`}
             >
               Blog
             </Link>
             <Link
               href="/about"
               onClick={() => setMobileMenuOpen(false)}
-              className="p-2.5 rounded-2xl bg-slate-50 text-sm font-semibold text-slate-800 text-center hover:bg-slate-100"
+              className={`p-2.5 rounded-2xl text-xs font-semibold text-center transition-colors ${
+                pathname === "/about" ? "bg-blue-50 text-blue-600 font-bold" : "bg-slate-50 text-slate-800 hover:bg-slate-100"
+              }`}
             >
               About
             </Link>
             <Link
               href="/contact"
               onClick={() => setMobileMenuOpen(false)}
-              className="p-2.5 rounded-2xl bg-slate-50 text-sm font-semibold text-slate-800 text-center hover:bg-slate-100"
+              className={`p-2.5 rounded-2xl text-xs font-semibold text-center transition-colors col-span-2 ${
+                pathname === "/contact" ? "bg-blue-50 text-blue-600 font-bold" : "bg-slate-50 text-slate-800 hover:bg-slate-100"
+              }`}
             >
-              Contact
+              Contact Us
             </Link>
+          </div>
+
+          {/* Quick Services Navigation in Mobile Drawer */}
+          <div className="pt-1">
+            <p className="text-[10px] font-bold uppercase tracking-wider text-slate-400 mb-2 px-1">Top Services</p>
+            <div className="grid grid-cols-2 gap-1.5 text-[11px] text-slate-700">
+              <Link
+                href="/services/ai-seo"
+                onClick={() => setMobileMenuOpen(false)}
+                className="px-2.5 py-1.5 rounded-lg bg-slate-50 hover:bg-blue-50 hover:text-blue-600 transition-colors"
+              >
+                AI-Powered SEO
+              </Link>
+              <Link
+                href="/services/technical-seo"
+                onClick={() => setMobileMenuOpen(false)}
+                className="px-2.5 py-1.5 rounded-lg bg-slate-50 hover:bg-blue-50 hover:text-blue-600 transition-colors"
+              >
+                Technical SEO
+              </Link>
+              <Link
+                href="/services/local-seo"
+                onClick={() => setMobileMenuOpen(false)}
+                className="px-2.5 py-1.5 rounded-lg bg-slate-50 hover:bg-blue-50 hover:text-blue-600 transition-colors"
+              >
+                Local SEO &amp; Maps
+              </Link>
+              <Link
+                href="/services/ecommerce-seo"
+                onClick={() => setMobileMenuOpen(false)}
+                className="px-2.5 py-1.5 rounded-lg bg-slate-50 hover:bg-blue-50 hover:text-blue-600 transition-colors"
+              >
+                E-commerce SEO
+              </Link>
+            </div>
           </div>
 
           <div className="space-y-2 pt-2">
             <Link
               href="/seo-audit"
               onClick={() => setMobileMenuOpen(false)}
-              className="w-full flex items-center justify-center gap-2 p-3.5 rounded-2xl bg-gradient-to-r from-blue-600 via-indigo-600 to-cyan-600 font-bold text-white text-center shadow-lg shadow-blue-500/20"
+              className="w-full flex items-center justify-center gap-2 p-3.5 rounded-2xl bg-gradient-to-r from-blue-600 via-indigo-600 to-cyan-600 font-bold text-white text-xs sm:text-sm text-center shadow-lg shadow-blue-500/20"
             >
               <Sparkles className="w-4 h-4 text-amber-300" />
               Get Free SEO Audit
@@ -395,7 +440,7 @@ export function Navbar() {
             <Link
               href="/talk-to-expert"
               onClick={() => setMobileMenuOpen(false)}
-              className="w-full flex items-center justify-center gap-2 p-3.5 rounded-2xl bg-white border border-slate-200 font-semibold text-slate-800 text-center hover:bg-slate-50"
+              className="w-full flex items-center justify-center gap-2 p-3.5 rounded-2xl bg-white border border-slate-200 font-semibold text-slate-800 text-xs sm:text-sm text-center hover:bg-slate-50"
             >
               <Phone className="w-4 h-4 text-blue-600" />
               Talk to SEO Expert

@@ -15,15 +15,15 @@ export default function SEOAuditPage() {
     <>
       <Breadcrumbs items={[{ label: "Free SEO Audit", href: "/seo-audit" }]} />
 
-      <section className="py-16 md:py-24 bg-slate-950 text-white relative overflow-hidden">
+      <section className="py-10 sm:py-16 md:py-24 bg-slate-950 text-white relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
             {/* Left Column: Heading and Value Pillars */}
             <div className="lg:col-span-5 space-y-6">
               <span className="text-xs font-bold uppercase tracking-widest text-amber-400 bg-amber-400/10 px-3 py-1 rounded-full border border-amber-400/20">
                 100% Free • No Obligation
               </span>
-              <h1 className="text-3xl sm:text-5xl font-extrabold text-white leading-tight">
+              <h1 className="text-2xl sm:text-4xl md:text-5xl font-extrabold text-white leading-tight">
                 Get a Comprehensive Technical SEO Audit
               </h1>
               <p className="text-base text-slate-300 leading-relaxed">

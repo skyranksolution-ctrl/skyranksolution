@@ -107,12 +107,12 @@ export function HomeTopSlider() {
         <div className="absolute top-0 bottom-0 left-0 w-12 sm:w-20 bg-gradient-to-r from-white via-white/80 to-transparent z-10 pointer-events-none" />
         <div className="absolute top-0 bottom-0 right-0 w-12 sm:w-20 bg-gradient-to-l from-white via-white/80 to-transparent z-10 pointer-events-none" />
 
-        <div className="flex w-[300%] sm:w-[250%] animate-marquee">
-          <div className="flex items-center gap-4 sm:gap-6 px-4">
+        <div className="flex w-max animate-marquee">
+          <div className="flex items-center gap-3 sm:gap-6 px-4">
             {marqueeBanners.map((item, idx) => (
               <div
                 key={`${item.id}-${idx}`}
-                className="w-[280px] sm:w-[330px] flex-shrink-0 bg-white border border-slate-200/90 hover:border-blue-500 rounded-2xl p-2.5 shadow-sm hover:shadow-xl transition-all duration-300 group/card cursor-pointer"
+                className="w-[260px] sm:w-[330px] flex-shrink-0 bg-white border border-slate-200/90 hover:border-blue-500 rounded-2xl p-2.5 shadow-sm hover:shadow-xl transition-all duration-300 group/card cursor-pointer"
               >
                 {/* Small Banner Image (16:9, Compact & Razor Sharp) */}
                 <div className="relative aspect-[16/9] w-full rounded-xl overflow-hidden bg-slate-900 border border-slate-100">

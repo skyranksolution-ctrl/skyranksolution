@@ -15,16 +15,16 @@ export default function TalkToExpertPage() {
     <>
       <Breadcrumbs items={[{ label: "15-Day Free Demo", href: "/talk-to-expert" }]} />
 
-      <section className="py-16 md:py-24 bg-slate-950 text-white relative overflow-hidden">
+      <section className="py-10 sm:py-16 md:py-24 bg-slate-950 text-white relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
             {/* Left Column: Value Proposition */}
             <div className="lg:col-span-5 space-y-6">
               <span className="text-xs font-bold uppercase tracking-widest text-emerald-400 bg-emerald-500/10 px-3.5 py-1.5 rounded-full border border-emerald-400/20 inline-flex items-center gap-1.5">
                 <Sparkles className="w-3.5 h-3.5 text-emerald-400 animate-pulse" />
                 15-Day Risk-Free VIP Demo Active
               </span>
-              <h1 className="text-3xl sm:text-5xl font-extrabold text-white leading-tight">
+              <h1 className="text-2xl sm:text-4xl md:text-5xl font-extrabold text-white leading-tight">
                 Claim Your 15-Day Free Demo & <span className="bg-gradient-to-r from-blue-400 via-cyan-300 to-indigo-300 bg-clip-text text-transparent">SEO Strategy Session</span>
               </h1>
               <p className="text-base text-slate-300 leading-relaxed">
