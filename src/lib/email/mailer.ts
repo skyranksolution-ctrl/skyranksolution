@@ -15,7 +15,7 @@ interface LeadEmailData {
 
 export async function sendLeadNotificationEmail(lead: LeadEmailData) {
   const recipientEmail = "skyranksolution@gmail.com";
-  const fullPhone = `${lead.countryCode} ${lead.phone}`;
+  const fullPhone = lead.countryCode ? `${lead.countryCode} ${lead.phone}` : lead.phone;
 
   const budgetLabels: Record<string, string> = {
     "10k-25k": "₹10,000 – ₹25,000 / month (Starter SEO)",
@@ -23,7 +23,7 @@ export async function sendLeadNotificationEmail(lead: LeadEmailData) {
     "50k-plus": "₹50,000+ / month (Enterprise & Multi-City)",
   };
 
-  const formattedBudget = budgetLabels[lead.budget] || lead.budget || "Not Specified";
+  const formattedBudget = lead.budget ? (budgetLabels[lead.budget] || lead.budget) : "Not Specified";
 
   const emailHtml = `
     <!DOCTYPE html>
