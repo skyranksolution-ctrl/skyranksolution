@@ -1,75 +1,89 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
 import Link from "next/link";
-import { Sparkles, CheckCircle2, Gift } from "lucide-react";
-import { motion } from "framer-motion";
+import { ArrowRight, Sparkles, CheckCircle2 } from "lucide-react";
 import { FadeIn } from "@/components/ui/Motion";
 
 export function FinalCTASection() {
   return (
-    <section className="py-24 bg-gradient-to-r from-blue-900 via-indigo-900 to-slate-950 text-white relative overflow-hidden">
-      {/* Background radial highlight */}
-      <motion.div
-        animate={{ scale: [1, 1.2, 1], opacity: [0.15, 0.3, 0.15] }}
-        transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[350px] bg-blue-500/25 blur-[130px] rounded-full pointer-events-none"
-      />
-
-      <div className="w-full px-4 sm:px-6 lg:px-8 xl:px-10 2xl:px-14 text-center relative z-10 space-y-8">
-        <FadeIn className="space-y-4">
-          <span className="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full bg-emerald-500/20 border border-emerald-400/40 text-emerald-300 text-xs font-black uppercase tracking-wider">
-            <Gift className="w-4 h-4 text-emerald-400 animate-bounce" />
-            Special Offer: 15-Day Free Demo Trial
-          </span>
-
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white tracking-tight leading-tight max-w-3xl mx-auto">
-            Experience SkyRank AI SEO for 15 Days Completely Free
-          </h2>
-
-          <p className="text-base sm:text-lg text-slate-300 max-w-2xl mx-auto leading-relaxed">
-            Stop losing high-value commercial searches to competitors. Test our ranking intelligence, technical audit, and entity models on your domain with zero financial risk.
-          </p>
-        </FadeIn>
-
-        {/* Buttons with Hover Scale */}
-        <FadeIn delay={0.2} className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-2">
-          <Link
-            href="/talk-to-expert?offer=15-days-free-demo"
-            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl font-black text-slate-900 bg-white hover:bg-slate-100 shadow-xl transition-all hover:scale-105 text-sm sm:text-base cursor-pointer"
-          >
-            <Gift className="w-4 h-4 text-emerald-600" />
-            <span>Claim 15-Day Free Demo</span>
-          </Link>
-
-          <Link
-            href="/seo-audit"
-            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl font-bold text-white bg-blue-600 hover:bg-blue-500 shadow-xl shadow-blue-600/40 border border-blue-400/30 transition-all hover:scale-105 text-sm sm:text-base cursor-pointer"
-          >
-            <Sparkles className="w-4 h-4 text-amber-300" />
-            <span>Instant SEO Audit Scan</span>
-          </Link>
-        </FadeIn>
-
-        {/* Trust Badges */}
-        <FadeIn delay={0.3} className="pt-6 flex flex-wrap items-center justify-center gap-6 text-xs text-slate-300">
-          <div className="flex items-center gap-2">
-            <CheckCircle2 className="w-4 h-4 text-emerald-400" />
-            <span>15 Days Free Trial</span>
+    <section className="py-12 sm:py-16 md:py-20 bg-slate-50 relative overflow-hidden border-t border-slate-200/80">
+      <div className="w-full px-4 sm:px-6 lg:px-8 xl:px-10 2xl:px-14">
+        {/* Floating Wide Banner Card in Reference Style */}
+        <div className="relative rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl bg-slate-950 border border-slate-800/80 min-h-[320px] sm:min-h-[380px] md:min-h-[420px] flex items-center">
+          {/* Background Image Layer */}
+          <div className="absolute inset-0 z-0">
+            <Image
+              src="/images/final-cta-banner.jpg"
+              alt="SkyRank AI SEO Workspace and Growth Intelligence"
+              fill
+              className="object-cover object-right md:object-center"
+              priority
+            />
+            {/* Cinematic Gradient Fade from Left (Dark) to Right (Transparent) */}
+            <div className="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-950/90 sm:via-slate-950/75 to-transparent z-10" />
+            {/* Mobile dark overlay to guarantee 100% legibility */}
+            <div className="absolute inset-0 bg-slate-950/60 sm:hidden z-10" />
           </div>
-          <div className="flex items-center gap-2">
-            <CheckCircle2 className="w-4 h-4 text-emerald-400" />
-            <span>No Credit Card Required</span>
+
+          {/* Banner Content (Left Aligned exactly like reference) */}
+          <div className="relative z-20 py-10 sm:py-14 md:py-16 px-6 sm:px-10 md:px-14 lg:px-16 max-w-2xl text-left">
+            <FadeIn className="space-y-3 sm:space-y-4">
+              {/* Top Subtitle */}
+              <p className="text-base sm:text-xl font-medium text-slate-200 tracking-wide">
+                Get started with
+              </p>
+
+              {/* Massive Bold Headline */}
+              <div className="space-y-1">
+                <h2 className="text-4xl sm:text-6xl md:text-7xl font-black text-white tracking-tight leading-none uppercase">
+                  15 DAYS <span className="text-rose-500">FREE</span>
+                </h2>
+              </div>
+
+              {/* Body Text */}
+              <p className="text-sm sm:text-base md:text-lg text-slate-300 font-normal leading-relaxed max-w-lg">
+                on your website ranking with SkyRank AI SEO Engine. Zero upfront cost.
+              </p>
+
+              {/* CTA Action Buttons */}
+              <div className="pt-2 sm:pt-4 flex flex-col sm:flex-row items-stretch sm:items-center gap-3.5 sm:gap-4">
+                <Link
+                  href="/talk-to-expert?offer=15-days-free-demo"
+                  className="inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3.5 sm:py-4 rounded-xl bg-rose-600 hover:bg-rose-500 text-white font-bold text-sm sm:text-base shadow-lg shadow-rose-600/30 transition-all hover:scale-[1.02] active:scale-95 text-center cursor-pointer"
+                >
+                  <span>Claim 15-Day Free Demo</span>
+                  <ArrowRight className="w-4 h-4" />
+                </Link>
+
+                <Link
+                  href="/seo-audit"
+                  className="inline-flex items-center justify-center gap-2 px-6 py-3.5 sm:py-4 rounded-xl bg-white/10 hover:bg-white/20 text-white border border-white/20 font-semibold text-sm sm:text-base backdrop-blur-md transition-all text-center cursor-pointer"
+                >
+                  <Sparkles className="w-4 h-4 text-amber-300" />
+                  <span>Free Instant Audit</span>
+                </Link>
+              </div>
+
+              {/* Trust Micro-Pills */}
+              <div className="pt-2 sm:pt-3 flex flex-wrap items-center gap-x-5 gap-y-2 text-xs text-slate-300 font-medium">
+                <span className="inline-flex items-center gap-1.5">
+                  <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400" />
+                  No Credit Card Required
+                </span>
+                <span className="inline-flex items-center gap-1.5">
+                  <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400" />
+                  Zero Lock-In Contract
+                </span>
+                <span className="inline-flex items-center gap-1.5">
+                  <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400" />
+                  100% White-Hat Guarantee
+                </span>
+              </div>
+            </FadeIn>
           </div>
-          <div className="flex items-center gap-2">
-            <CheckCircle2 className="w-4 h-4 text-emerald-400" />
-            <span>Zero Lock-In Contract</span>
-          </div>
-          <div className="flex items-center gap-2">
-            <CheckCircle2 className="w-4 h-4 text-emerald-400" />
-            <span>100% White-Hat Guarantee</span>
-          </div>
-        </FadeIn>
+        </div>
       </div>
     </section>
   );

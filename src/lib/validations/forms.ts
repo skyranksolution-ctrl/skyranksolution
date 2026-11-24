@@ -24,8 +24,9 @@ export interface ConsultationFormData {
   email: string;
   phone: string;
   websiteUrl: string;
+  targetKeywords: string;
   preferredDate?: string;
-  primaryGoal: string;
+  primaryGoal?: string;
   honeypot?: string;
 }
 
@@ -173,8 +174,8 @@ export function validateConsultationForm(data: ConsultationFormData): Validation
     errors.websiteUrl = "Please provide a valid website domain.";
   }
 
-  if (!data.primaryGoal || !data.primaryGoal.trim()) {
-    errors.primaryGoal = "Please specify your primary organic growth goal.";
+  if (!data.targetKeywords || !data.targetKeywords.trim()) {
+    errors.targetKeywords = "Please enter 1 or more target keywords you want to rank.";
   }
 
   const success = Object.keys(errors).length === 0;
@@ -188,8 +189,9 @@ export function validateConsultationForm(data: ConsultationFormData): Validation
           email: sanitizeString(data.email).toLowerCase(),
           phone: sanitizeString(data.phone),
           websiteUrl: sanitizeString(data.websiteUrl),
+          targetKeywords: sanitizeString(data.targetKeywords),
           preferredDate: data.preferredDate ? sanitizeString(data.preferredDate) : undefined,
-          primaryGoal: sanitizeString(data.primaryGoal),
+          primaryGoal: data.primaryGoal ? sanitizeString(data.primaryGoal) : undefined,
         }
       : undefined,
   };

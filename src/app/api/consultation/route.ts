@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
-import { validateConsultationForm } from "@/lib/validations/forms";
+import { validateConsultationForm, ConsultationFormData } from "@/lib/validations/forms";
 import { saveSubmission } from "@/lib/db/submissions";
+import { sendLeadNotificationEmail } from "@/lib/email/mailer";
 
 export async function POST(req: NextRequest) {
   try {
@@ -14,17 +15,38 @@ export async function POST(req: NextRequest) {
       );
     }
 
-    const { id } = await saveSubmission("consultation", validation.sanitizedData as unknown as Record<string, unknown>);
+    const sanitized = validation.sanitizedData as unknown as ConsultationFormData;
+    const { id } = await saveSubmission(
+      "consultation",
+      sanitized as unknown as Record<string, unknown>
+    );
+
+    // Send email to skyranksolution@gmail.com
+    await sendLeadNotificationEmail({
+      name: sanitized.fullName,
+      email: sanitized.email,
+      website: sanitized.websiteUrl,
+      phone: sanitized.phone,
+      targetKeywords: sanitized.targetKeywords,
+      preferredDate: sanitized.preferredDate,
+      primaryGoal: sanitized.primaryGoal,
+      source: "Strategy Session / 15-Day Free Demo Form",
+    });
 
     return NextResponse.json({
       success: true,
-      message: "Consultation booked! We have received your request and will confirm your meeting slot with our Lead SEO Consultant shortly.",
+      message:
+        "Demo & Strategy Consultation booked! We have received your request and emailed your details to our search team.",
       submissionId: id,
     });
   } catch (error) {
     console.error("Consultation form API error:", error);
     return NextResponse.json(
-      { success: false, message: "Could not schedule consultation. Please try again or contact us directly." },
+      {
+        success: false,
+        message:
+          "Could not schedule consultation. Please try again or contact us directly.",
+      },
       { status: 500 }
     );
   }
