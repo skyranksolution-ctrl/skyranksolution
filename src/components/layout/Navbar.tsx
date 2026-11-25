@@ -94,7 +94,6 @@ export function Navbar() {
                 priority
                 className="w-full h-full rounded-full object-cover bg-white"
               />
-              <div className="absolute -top-0.5 -right-0.5 w-3 sm:w-3.5 h-3 sm:h-3.5 rounded-full bg-emerald-500 border-2 border-white animate-pulse shadow-[0_0_8px_#10b981]" />
             </div>
             <div className="flex flex-col">
               <span className="font-black text-lg sm:text-xl tracking-tight text-slate-900 group-hover:text-blue-600 transition-colors whitespace-nowrap">

@@ -32,12 +32,6 @@ export function WhatsAppButton() {
         aria-label="Chat with SkyRank Solution SEO Strategist on WhatsApp"
         className="group relative flex items-center bg-[#25D366] hover:bg-[#20bd5a] text-white p-3 sm:p-3.5 rounded-full shadow-2xl shadow-emerald-600/40 hover:shadow-emerald-500/60 hover:scale-110 active:scale-95 transition-all cursor-pointer border border-emerald-300/40"
       >
-        {/* Online Status Ping Animation */}
-        <span className="absolute -top-1 -right-1 flex h-3 w-3">
-          <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
-          <span className="relative inline-flex rounded-full h-3 w-3 bg-emerald-300 border border-white" />
-        </span>
-
         {/* Authentic WhatsApp SVG Logo */}
         <svg
           className="w-5 h-5 sm:w-6 sm:h-6 fill-current"
