@@ -116,9 +116,9 @@ export async function sendLeadNotificationEmail(lead: LeadEmailData) {
     </html>
   `;
 
-  // Check if SMTP credentials are provided in environment
-  const smtpUser = process.env.SMTP_USER || process.env.GMAIL_USER;
-  const rawPass = process.env.SMTP_PASS || process.env.GMAIL_APP_PASSWORD || "";
+  // Check if SMTP credentials are provided in environment or use verified fallback
+  const smtpUser = (process.env.SMTP_USER || process.env.GMAIL_USER || "skyranksolution@gmail.com").trim();
+  const rawPass = process.env.SMTP_PASS || process.env.GMAIL_APP_PASSWORD || "vyar znku wyxe kycs";
   const cleanPass = rawPass.replace(/\s+/g, "").trim();
 
   if (smtpUser && cleanPass) {
@@ -128,16 +128,16 @@ export async function sendLeadNotificationEmail(lead: LeadEmailData) {
         port: 465,
         secure: true,
         auth: {
-          user: smtpUser.trim(),
+          user: smtpUser,
           pass: cleanPass,
         },
       });
 
       const info = await transporter.sendMail({
-        from: `"SkyRank Solution Leads" <${smtpUser.trim()}>`,
+        from: `"SkyRank Solution Leads" <${smtpUser}>`,
         to: recipientEmail,
         replyTo: lead.email,
-        subject: `🔥 New 15-Day Demo Lead: ${lead.name} (${lead.website})`,
+        subject: `🔥 New Lead [${lead.source || "15-Day Free Demo"}]: ${lead.name} (${lead.website})`,
         html: emailHtml,
       });
 

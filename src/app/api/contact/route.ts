@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { validateContactForm } from "@/lib/validations/forms";
 import { saveSubmission } from "@/lib/db/submissions";
+import { sendLeadNotificationEmail } from "@/lib/email/mailer";
 
 export async function POST(req: NextRequest) {
   try {
@@ -14,7 +15,19 @@ export async function POST(req: NextRequest) {
       );
     }
 
-    const { id } = await saveSubmission("contact", validation.sanitizedData as unknown as Record<string, unknown>);
+    const sanitized = validation.sanitizedData as unknown as Record<string, string>;
+    const { id } = await saveSubmission("contact", sanitized);
+
+    // Send email notification to skyranksolution@gmail.com
+    await sendLeadNotificationEmail({
+      name: sanitized.fullName,
+      email: sanitized.email,
+      website: sanitized.companyName || "Contact Inquiry",
+      phone: sanitized.phone,
+      primaryGoal: sanitized.message,
+      budget: sanitized.monthlyBudget,
+      source: "Contact Page Form",
+    });
 
     return NextResponse.json({
       success: true,
